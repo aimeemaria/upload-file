@@ -1,0 +1,37 @@
+<!-- 
+
+    S U P P O R T
+    - - - - - - -
+    
+    Web: ctrlq.org
+
+    Twitter: @labnol
+    
+    Email: amit@labnol.org
+    http://www.labnol.org/internet/receive-files-in-google-drive/19697/
+    http://ctrlq.org/code/19747-google-forms-upload-files
+      
+-->
+
+<form id="myForm">
+    <input type="text" name="myName" placeholder="Your name..">
+    <input type="file" name="myFile">
+    <input type="submit" value="Upload File" 
+           onclick="this.value='Uploading..';
+                    google.script.run.withSuccessHandler(fileUploaded)
+                    .uploadFiles(this.parentNode);
+                    return false;">
+</form>
+
+<div id="output"></div>
+
+<script>
+    function fileUploaded(status) {
+        document.getElementById('myForm').style.display = 'none';
+        document.getElementById('output').innerHTML = status;
+    }
+</script>
+
+<style>
+ input { display:block; margin: 20px; }
+</style>
