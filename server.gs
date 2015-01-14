@@ -1,6 +1,6 @@
 
 function doGet2(e) {
-  return HtmlService.createHtmlOutputFromFile('FORM2.html');
+  return HtmlService.createHtmlOutputFromFile('form.html');
 }
 
 function uploadFiles(form) {
