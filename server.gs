@@ -1,4 +1,5 @@
-function doGet(e) {
+
+function doGet2(e) {
   return HtmlService.createHtmlOutputFromFile('form.html');
 }
 
